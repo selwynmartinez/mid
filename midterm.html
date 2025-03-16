@@ -1,0 +1,167 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="midterm.css">
+    <title>PT-MidTerm</title>
+
+    <style>
+        script {
+            align-self: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <script class="script">
+        alert("Hello! Welcome to My JavaScript Code")
+        alert("Can I ask your name before we begin!")
+        
+        alert(wyn())
+            function wyn() {
+                let text;
+                    let name = prompt("Please enter your name:", " ");
+
+                        if (name == null || name == " ") {
+                            text = "User cancelled the prompt.";
+                        } 
+                        
+                        else {
+                            text = "Hello " + name + "!" + " Welcome To My JavaScript Website!";
+                        }
+                    
+                    document.getElementById("demo").innerHTML = text;
+                }
+        
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="midterm.css">
+    <title>PT-MidTerm</title>
+
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #F5F5F7;
+            text-align: center;
+        }
+        h2,h3 {
+            font-family: Angsana New;
+            font-size: 35px;
+            font-weight: lighter;
+        }
+
+        table {
+            flex: content;
+            background-color: #F5F5F7;
+            width: 80%;
+            margin: auto;
+            padding: 5px;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        th {
+            background-color: rgba(241, 176, 176, 0.689);
+            color: black;
+        }
+        
+        td:nth-child(odd) {
+            background-color: lemonchiffon;
+        }
+
+        td:nth-child(even) {
+            background-color: rgb(175, 241, 175);
+        }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <h2>Certification of Registration</h2>
+    <h3>Using JavaScript</h3>
+
+    <center>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Student Number</th>
+                    <th>Semester</th>
+                    <th>Degree</th>
+                    <th>Year/Section</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </center>
+
+    <script>
+        function getStudentDetails() {
+            let name = prompt("Please enter your name:", "");
+            let studentNumber = prompt("Please enter your student number:", "");
+            let semester = prompt("Please enter your semester:", "");
+            let degree = prompt("Please enter your degree:", "");
+            let yearSection = prompt("Please enter your year/section:", "");
+
+            if (name && studentNumber && semester && degree && yearSection) {
+                let table = document.getElementById("studentTable").getElementsByTagName('tbody')[0];
+                let newRow = table.insertRow();
+                newRow.insertCell(0).textContent = name;
+                newRow.insertCell(1).textContent = studentNumber;
+                newRow.insertCell(2).textContent = semester;
+                newRow.insertCell(3).textContent = degree;
+                newRow.insertCell(4).textContent = yearSection;
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+        
+        getStudentDetails();
+    </script>
+</body>
+</html>
